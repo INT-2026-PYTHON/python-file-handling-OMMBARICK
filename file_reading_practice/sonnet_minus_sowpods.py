@@ -58,3 +58,15 @@ After sorting -> ['a', 'compare', 'i', 'to'].
 =================================================
 
 """
+
+sowpods = set(open("sowpods.txt").read().splitlines())
+sonnet_words = open("sonnet_words.txt").read().splitlines()
+missing_words = []
+for word in sonnet_words:
+    if word not in sowpods:
+        missing_words.append(word)
+
+print("Words in sonnet but not in sowpods:")
+print(missing_words)
+wo=len(missing_words)
+print("Total:", wo)
